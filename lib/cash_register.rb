@@ -7,6 +7,11 @@ class CashRegister
   end
 
 
+  def total
+    :total
+  end
+
+
 
 
 
