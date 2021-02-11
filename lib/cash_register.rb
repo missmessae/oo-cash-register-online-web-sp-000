@@ -4,6 +4,7 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+    @items = []
   end
 
 
@@ -13,6 +14,7 @@ class CashRegister
 
 
   def add_item(title, price, qty = 1)
+
     @total = @total + (price*qty)
     self.total
   end
@@ -23,7 +25,18 @@ class CashRegister
     puts "After the discount, the total comes to #{self.total}."
   end
 
+  def items
 
+
+  end
+
+
+    describe '#items' do
+      it 'returns an array containing all items that have been added' do
+        new_register = CashRegister.new
+        new_register.add_item("eggs", 1.99)
+        new_register.add_item("tomato", 1.76, 3)
+        expect(new_register.items).to eq(["eggs", "tomato", "tomato", "tomato"])
 
 
 end
