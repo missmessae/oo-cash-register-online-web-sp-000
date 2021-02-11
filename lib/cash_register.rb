@@ -8,7 +8,7 @@ class CashRegister
 
 
   def total
-    :total
+    @total
   end
 
 
