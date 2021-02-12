@@ -21,8 +21,12 @@ class CashRegister
 
 
   def apply_discount
+    if @discount > 0
     @total*@discount
     puts "After the discount, the total comes to #{self.total}."
+  else
+    puts "here is no discount to apply."
+  end
   end
 
   def items
