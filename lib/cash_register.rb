@@ -21,7 +21,7 @@ class CashRegister
 
 
   def apply_discount
-    @total*0.2
+    @total*@discount
     puts "After the discount, the total comes to #{self.total}."
   end
 
